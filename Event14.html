@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center" style="color: red;">Show image using URL</h1>
+        <div style="margin-left: 600px;">Enter image URL: <input type="text" id="d1">
+        </div><br>
+        <button onclick="abc()" style="background-color: yellow;margin-left:700px;">Add Image</button>
+        <script>
+            function abc(){
+                img=document.createElement("img");
+                img.src=document.getElementById("d1").value
+                img.style.height="200px"
+                img.style.width="250px"
+                document.body.appendChild(img);
+            }
+        </script>
+    </body>
+</html>

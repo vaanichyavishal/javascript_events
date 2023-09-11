@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <img onclick="abc()" id="d1" style="height: 500px;width: 550px;" src="https://www.suntiros.com/wp-content/uploads/2018/09/Yash-New-Images-Download-710x1024.jpg" alt="">
+        <script>
+            var a=document.getElementById("d1")
+            var z=["https://www.suntiros.com/wp-content/uploads/2018/09/Yash-New-Images-Download-710x1024.jpg","https://i0.wp.com/filmitamasha.com/wp-content/uploads/2020/06/Yash-11.jpg?fit=1024%2C1024&ssl=1","https://i.pinimg.com/736x/d8/b1/6e/d8b16e927edc8f67dcea008f7d3722f1.jpg","https://i1.wp.com/filmitamasha.com/wp-content/uploads/2020/06/Yash-6.jpg?fit=819%2C1024&ssl=1","https://i.pinimg.com/736x/f4/85/9f/f4859f03005808853a321b8136ac7353.jpg","https://i.pinimg.com/736x/3a/ff/0f/3aff0f13e82f3b84eb9fd98fb2cc141e.jpg","https://th.bing.com/th?id=OIF.LzCOAmHdwNe3SCOKnkb%2bpA&pid=ImgDet&rs=1"]
+            var i=0
+            function abc(){ 
+                if(i==z.length){
+                    i=0
+                }
+                a.src=z[i]
+                i++           
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center" style="color: red;">Add Students</h1>   
+        <input type="text" id="d2" style="margin-left: 600px;">
+        <button onclick="abc()">Add Students</button>
+        <ul id="sd"></ul>
+    </body>
+    <script>
+        var a=[];
+        var x=document.getElementById('sd');
+        function abc(){           
+            var y=document.getElementById("d2");
+                a.push(y.value);
+                genUI();
+        }
+        function genUI(){
+            x.innerHTML=""
+            a.forEach(function(y,i){
+                var n=document.createElement("li");
+                n.innerHTML=y;
+                x.appendChild(n)
+            })
+        }
+    </script>
+</html>

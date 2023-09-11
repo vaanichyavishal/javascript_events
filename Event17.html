@@ -1,0 +1,34 @@
+<html>
+    <head></head>
+    <body>
+        <h1 style="color: red;" align="center">Image Carousel</h1>
+        <img id="d3" style="height: 500px;width: 350px;border: 1px solid;margin-left: 610px;" src="" alt="">
+        <button onclick="a()"style="background-color: yellow;margin-left: 580px;">Prev</button>
+        <button onclick="b()" style="background-color: yellow;margin-left: 320px;">Next</button>
+        
+        <script>
+            var x=["https://krishnastore.com/images/cache/545.jpg","https://aakaar.com/cdn/shop/products/Aakaar-652_ee83e351-e222-4f23-9ee4-b435723bf58c@2x.jpg?v=1669894453","https://media.licdn.com/dms/image/D5612AQFD1jjvWDz3sA/article-cover_image-shrink_600_2000/0/1660876749561?e=2147483647&v=beta&t=d6pmTZhH1T73GZjQ1Fe3shfsOSK1gLYSgGXPLMl_hOU","https://i.pinimg.com/236x/dd/97/3a/dd973ac116a977c8dd5296b0da504b8c.jpg"]
+          
+            var k=document.getElementById("d3")
+            var i=0
+            k.src=x[i]
+
+            function a(){
+                if(i==0){
+                    i=x.length
+                }
+                i--
+                k.src=x[i]
+        
+            }
+            function b(){
+                if(i==x.length-1){
+                    i=-1;
+                   
+                }
+                i++
+                k.src=x[i]
+            }
+        </script>
+    </body>
+</html>

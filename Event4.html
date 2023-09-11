@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center" style="color: red;">change button background color on click</h1>
+        <button onclick="abc()" id="sd" style="margin-left: 700px;">white</button>
+    </body>
+    <script>
+         var x=document.getElementById("sd")        
+         x.style.backgroundColor="white"
+         function abc(){
+            if(x.style.backgroundColor=="white"){
+                x.style.backgroundColor="green"
+                x.style.color="white"
+            }
+            else{
+                x.style.backgroundColor="white"
+                x.style.color="black"
+            }
+         }
+         document.body.style.appendChild(x)
+    </script>
+</html>

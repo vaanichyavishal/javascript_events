@@ -1,0 +1,146 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="abc()">click</button>
+
+        <button onclick="a()">open red</button>
+        <button onclick="b()">open blue</button>
+        <button onclick="c()">open orange</button>
+        <button onclick="e()">open green</button>
+
+        <script>
+            //1
+            function abc(){
+            alert ("hello")
+            }
+            //2
+            function a(){            
+              document.body.style.backgroundColor="red"
+              
+            }
+            function b(){
+                document.body.style.backgroundColor="blue"
+            }
+            function c(){
+                document.body.style.backgroundColor="orange"
+            }
+            function e(){
+                document.body.style.backgroundColor="green"
+            }
+        </script>
+        <h1 onclick="ab()" id="ss">click here</h1>
+        <script>
+            //3
+            function ab(){
+                var y=document.getElementById("ss")
+                y.innerHTML="Oops"
+            }
+        </script>
+        <div id="ds">
+            <button onclick="xy()">change button here</button>
+        </div>
+        <script>
+            //4
+            function xy(){
+                var z=document.getElementById("ds")
+                z.innerHTML="to text"
+            }
+        </script>
+        <h1 onmouseover="hi()">vishal</h1>
+        <script>
+            //5
+            function hi(){
+                alert("hello vishal")
+            }
+        </script>
+        <table id="dd" border="3px" >
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>City</th>
+            </thead>
+        </table>
+        <button onclick="dc()" id="sv">click here for table</button>
+        
+        <script>
+            
+             var d=[
+            {   
+                "Name":"praveen",
+                "Age":"36",
+                "Gender":"male",
+                "Salary":"10000",
+                "City":"hyderabad",
+            },
+            {
+                "Name":"srikanth",
+                "Age":"32",
+                "Gender":"male",
+                "Salary":"20000",
+                "City":"bengaluru",
+            },
+            {
+                "Name":"pradeep",
+                "Age":"21",
+                "Gender":"male",
+                "Salary":"25000",
+                "City":"hyderabad",
+            },
+            {
+                "Name":"mounika",
+                "Age":"20",
+                "Gender":"female",
+                "Salary":"35000",
+                "City":"nalgonda",
+            },
+            {
+                "Name":"nikhil",
+                "Age":"22",
+                "Gender":"male",
+                "Salary":"2000",
+                "City":"guntur",
+            },
+            {
+                "Name":"riya",
+                "Age":"14",
+                "Gender":"female",
+                "Salary":"40000",
+                "City":"indore",
+            },
+            ]
+            function dc(){
+            d.forEach(function(s,i){
+            var trow=document.createElement("tr");
+            var Name=document.createElement("td");
+            Name.innerHTML=s.Name;
+            trow.appendChild(Name);
+            var Age=document.createElement("td");
+            trow.appendChild(Age);
+            Age.innerHTML=s.Age;
+            var Gender=document.createElement("td");
+            trow.appendChild(Gender)
+            Gender.innerHTML=s.Gender;
+            var Salary=document.createElement("td");
+            trow.appendChild(Salary);
+            Salary.innerHTML=s.Salary;
+            var City=document.createElement("td");
+            trow.appendChild(City)
+            City.innerHTML=s.City
+            var a=document.getElementById("sv")
+            a.appendChild(trow)
+            })
+            }
+        </script><br>
+
+        <button onclick="h()">decrement</button>
+        <span id="zero"></span>
+        <button onclick="i()">increment</button>
+        <script>
+            function h(){
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <button id="hi" style="border: 1px solid;height: 100px;width: 150px;padding: 10px;margin-left: 700px;margin-top: 200px;"></button><br>
+        <button onclick="abc()" id="sv" style="margin-left: 750px;">on</button>
+        <button onclick="pqr()" id="vs" style="margin-right: 650px;">off</button>
+        <script>
+            var x=document.getElementById("sv")
+            var y=document.getElementById("vs")
+            var k=document.getElementById("hi")
+            function abc(){     
+                x.style.backgroundColor="red"
+                y.style.backgroundColor="blue"
+                k.style.backgroundColor="yellow"
+            }
+            function pqr(){
+                x.style.backgroundColor="blue"
+                y.style.backgroundColor="red"
+                k.style.backgroundColor="black"
+            }
+        </script>
+
+    </body>
+</html>

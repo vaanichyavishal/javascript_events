@@ -1,0 +1,90 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Add Contact Cards with CRUD operations</h1>
+        Name: <input type="text" id="a"> <br> <br>
+        Number: <input type="text" id="b"> <br> <br>
+        Email: <input type="text" id="c"> <br> <br>
+        Image: <input type="text" id="d"> <br> <br>
+        <button onclick="abc()">AddContact</button>
+        <div id="dd" style="text-align: center;"></div>
+        <script>
+            var nm = document.getElementById("a")
+            var nb = document.getElementById("b")
+            var em = document.getElementById("c")
+            var im = document.getElementById("d")
+            var z = document.getElementById("dd")
+            var contacts = []
+            function abc(){
+                        var newObj = {
+                            "name": nm.value ,
+                            "number":nb.value,
+                            "email":em.value,
+                            "image":im.value
+                        }
+                        contacts.push(newObj);
+                        genUI(contacts)
+                        }
+
+                    function genUI(){
+                z.innerHTML = "",
+                contacts.forEach(function(s,i){
+                    var x = document.createElement("div")
+                    x.style.width = "fit-content";
+                    x.style.boxsizing = "border-box";
+                    x.style.border = "3px solid red";
+                    x.style.borderRadius = "5px";
+                    x.style.backgroundColor = "yellow";
+                    x.style.padding = "15px";
+                    x.style.textAlign = "center;"
+
+                    var image = document.createElement("img")
+                    image.src = s.image;
+                    image.style.width="30%"
+                    image.style.height="30px"
+                    image.style.borderRadius="50%"
+                    x.appendChild(image) 
+
+                    var p1 = document.createElement("p")
+                    p1.innerHTML = "Name :";
+                    var sp1 = document.createElement("span")
+                    sp1.innerHTML = s.name;
+                    p1.appendChild(sp1)
+                    x.appendChild(p1);
+
+                    var p2 = document.createElement("p")
+                    p2.innerHTML = "Number :";
+                    var sp2 = document.createElement("span")
+                    sp2.innerHTML = s.number;
+                    p2.appendChild(sp2)
+                    x.appendChild(p2);
+                  
+                    var p3 = document.createElement("p")
+                    p3.innerHTML = "Email :";
+                    var sp3 = document.createElement("span")
+                    sp3.innerHTML = s.email;
+                    p3.appendChild(sp3)
+                    x.appendChild(p3);
+                    z.appendChild(x)
+
+
+                    var btn = document.createElement("button")
+                    btn.innerHTML="delete"
+                    btn.onclick=function(){
+                       deletefn(i);   
+                   
+                    }
+                    x.appendChild(btn);
+                    z.appendChild(x) 
+                })
+
+            }
+               function deletefn(i){
+              contacts.splice(i,1)
+                genUI(contacts);
+            }
+            
+                
+        </script>
+    </body>
+</html>

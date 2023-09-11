@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="abc()" id="sv" style="height:100px; width:150px;margin-left: 700px; margin-top: 250px;"></button>
+        <script>
+            var x=["green","yellow","blue","orange"]
+            var i=0
+            function abc(){
+            if(i==x.length){
+                i=0;
+            }
+            var y=document.getElementById("sv")
+                y.style.backgroundColor=x[i]
+                i++;
+            }
+        </script>
+    </body>
+</html>

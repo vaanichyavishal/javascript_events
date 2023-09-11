@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <style>
+        #dd{border: 2px solid;
+            padding: 10px;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+    <body>
+        <div id="dd"></div>
+        <button onclick="a()">open red</button>
+        <button onclick="b()">open blue</button>
+        <button onclick="c()">open orange</button>
+        <button onclick="e()">open green</button> 
+        <script>
+            var x=document.getElementById("dd")
+            function a(){
+                x.style.background="red"
+            }
+            function b(){
+                x.style.background="blue"
+            }
+            function c(){
+                x.style.background="orange"
+            }
+            function e(){
+                x.style.background="green"
+            }
+        </script>       
+    </body>
+</html>
